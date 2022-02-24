@@ -16,5 +16,13 @@ def soma():
 
 @app.get('/names')
 def names(meu_dict):
-    if "nome" in meu_dict:
-        print(meu_dict['chave'])
+    try:
+        if "nome" in meu_dict:
+            print(meu_dict['chave'])
+    except KeyError as _:
+        ...
+
+
+        # Erros e exceções: https://docs.python.org/pt-br/3/tutorial/errors.html#syntax-errors
+
+        # lista de exceções ambutidas: https://docs.python.org/pt-br/3/library/exceptions.html#bltin-exceptions
